@@ -44,7 +44,7 @@ container div which contains:
 
 ## **Pseudocode:**
 
-1. create Minecraft object which contains only the World Matrix and the toolbar properties.
+1. creating Minecraft object which contains only the World Matrix and the toolbar properties.
 
     * creating the toolbar HTML - rightZone
     
@@ -63,7 +63,7 @@ container div which contains:
             isSelectedInventory, // click event on the inventory
             addTile() ,// click event on matrix && isSelectedInventory = true
        }
-5. adding listening callbacks to the toolbar divs and to the matrix.
+5. adding listening callbacks to the toolbar divs, to the matrix and to the inventory.
 
     * click event on tools divs -> 
         1. isSelectedTool=true
