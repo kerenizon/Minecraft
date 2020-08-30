@@ -1,0 +1,154 @@
+:root{
+    --numColumns: 25;
+    --numRows: 13;
+
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Russo One', sans-serif;
+}
+
+/************************ 1. styling the container: initial page ***************************/
+.container{
+    height: 100vh;
+    display: flex;
+}
+
+.centerZone{
+    width: 90% ;
+    background: url(./imgs/backgroundBrown.jpg);
+}
+
+.centerZone img{
+    position: relative;
+    top: 35%;
+    left: 33%;
+}
+
+.centerZone button{
+    position: relative;
+    top: 43%;
+    left: 10%;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5em;
+    padding: 5px 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/************************ 2. styling the container: toolbar ***************************/
+
+.rightZone{
+    width: 10%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool{
+    position: relative;
+    height: 110px;
+    width: 80px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    background: url(./imgs/Stone_Pickaxe_JE2_BE2.png) no-repeat center center /contain;
+    cursor: pointer;
+}
+.shovelTool{
+    background: url(./imgs/Stone_Shovel_JE2_BE2.png) no-repeat center center /contain;
+}
+
+.axeTool{
+    background: url(./imgs/Stone_Axe_JE2_BE2.png) no-repeat center center /contain;
+}
+
+.tool:hover{
+    filter: opacity(60%);
+    background-color: blue;
+}
+
+.tool::before{
+    content: 'PICKAXE';
+    color: white;
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    bottom: 0px;
+    left: 3px;
+}
+.shovelTool::before{
+    content: 'SHOVEL';
+    left: 7px;
+}
+.axeTool::before{
+    content: 'AXE';
+    left: 25px;
+}
+
+.inventory{
+    height: 50px;
+    width: 50px;
+    border: 1px solid grey;
+}
+/* h1[data-name = 'pickaxeToolTxt']{ */
+/* }  */
+
+/************************ 3. styling the World Matrix *********************************/
+
+
+.gridContainer{
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat( var(--numColumns),1fr);
+    grid-template-rows: repeat(var(--numRows),1fr);
+}
+
+.dirt{
+    background: url(./imgs/dirt.png) no-repeat center center /cover;
+}
+
+.grass-dirt{
+    background: url(./imgs/grass_side.png) no-repeat center center /cover;
+}
+
+.tree{
+    background: url(./imgs/bamboo_stalk.png) no-repeat center center /cover;
+}
+
+.trunk{
+    background: url(./imgs/wool_colored_brown.png) no-repeat center center /cover;
+}
+
+.sky{
+    background:rgb(34, 178, 214);
+}
+
+.stone{
+    background: url(./imgs/stone_andesite.png) no-repeat center center /cover;
+}
+
+.sea{
+    background: rgb(33, 69, 190);
+}
+
+div[data-type = 'tile']:hover{
+    border: 1px solid white;
+}
+
+.resetBtn{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    /* background: yellow; */
+}
+
+
