@@ -49,7 +49,7 @@ container div which contains:
     * creating the toolbar HTML - rightZone
     
 2. adding to the initial page (to the start button) a click event which will trigger the createWorld() method.
-3. implementing createWorld() method of Minecraft object: 
+3. implementing createWorld() and createResetWorld() methods of Minecraft object: 
     * creating 2d matrix object with data attribute of position for each tile.
     * creating 'reset' button with click event which resulting in showing the initial state of the matrix.
 
@@ -63,7 +63,7 @@ container div which contains:
             isSelectedInventory, // click event on the inventory
             addTile() ,// click event on matrix && isSelectedInventory = true
        }
-5. adding listening callbacks to the toolbar divs, to the matrix and to the inventory.
+5. adding listening callbacks to the tools divs, to the matrix and to the inventory.
 
     * click event on tools divs -> 
         1. isSelectedTool=true
